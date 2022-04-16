@@ -1,0 +1,29 @@
+.button, input[type='submit'] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 306px;
+  height: 60px;
+  background: $yellow;
+  @include font-size(18);
+  color: $text-color;
+  cursor: pointer;
+}
+
+.button--dark {
+  background-color: $black;
+  color: $white;
+}
+
+.button--slider {
+  max-width: 200px;
+  height: 45px;
+  margin-top: $s;
+
+  @media only screen and (min-width: $resolution-lg) {
+    max-width: 306px;
+    height: 60px;
+    margin-top: $l;
+  }
+}

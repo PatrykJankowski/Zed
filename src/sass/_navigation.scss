@@ -1,0 +1,241 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  height: $navigation-height-mobile;
+  border: 1px solid $black;
+  background: $white;
+
+  @media (min-width: $resolution-xl) {
+    top: 12px;
+    width: calc(100% - 24px);
+    height: $navigation-height;
+    margin: 12px;
+  }
+
+  &__logo-wrapper {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    margin-left: 30px;
+
+    @media (min-width: $resolution-xl) {
+      width: 288px;
+      margin-left: 0;
+      border-right: 1px solid black;
+    }
+  }
+
+  &__logo {
+    display: flex;
+
+    &--mobile {
+      margin: 40px 0 50px 15px;
+    }
+  }
+
+  &__nav-mobile {
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+    height: 0;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    top: $navigation-height-mobile;
+    z-index: 5;
+    left: 0; //IE fix
+
+    ul {
+      margin: 30px 0;
+      padding: 0;
+
+      li {
+        height: 100%;
+        line-height: 48px;
+        display: block;
+        padding: 0;
+
+        &.current_page_item {
+          > a {
+            //color: $primary;
+          }
+        }
+
+        a {
+          @include font-size(24);
+          display: block;
+          padding: 0 30px;
+          margin-bottom: $s;
+          color: $text-color;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  &__nav-desktop {
+    display: none;
+    flex: 1;
+    justify-content: flex-start;
+
+    ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      padding: 0;
+
+      li {
+        padding-left: $l;
+
+        a {
+          @include font-size(18);
+          color: $text-color;
+          transition: 1s ease;
+        }
+      }
+    }
+  }
+
+  &__toggle {
+    display: flex;
+    padding: 8px 0 8px 10px;
+    margin-right: 30px;
+    cursor: pointer;
+    align-self: center;
+    align-items: flex-end;
+    flex-grow: 1;
+    flex-direction: column;
+    z-index: 5;
+
+    @media (min-width: $resolution-xl) {
+      display: none;
+    }
+
+    &--open i {
+      background: transparent;
+
+      &:before {
+        background: #000;
+        top: 0;
+        transform: rotate(135deg);
+      }
+
+      &:after {
+        background: #000;
+        top: 0;
+        transform: rotate(225deg);
+      }
+    }
+  }
+
+  &__toggle-icon {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    width: 30px;
+    height: 8px;
+    background-color: $black;
+    transform: rotate(0);
+    transition: transform 300ms 100ms;
+
+    &:before, &:after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      width: 30px;
+      height: 8px;
+      background-color: $black;
+      transform: rotate(0);
+      transition: transform 300ms 100ms;
+    }
+
+    &:before {
+      top: -14px;
+    }
+
+    &:after {
+      top: 14px;
+    }
+  }
+
+  &__contact {
+    display: none;
+
+    @media (min-width: $resolution-xl) {
+      width: 288px;
+      height: 100%;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      background: $black;
+      color: $white;
+      @include font-size(24);
+      font-weight: 600;
+    }
+  }
+}
+
+/*.admin-bar {
+  .navbar {
+    margin-top: 32px;
+  }
+}*/
+
+@media (min-width: $resolution-xl) {
+  .navbar__nav-mobile {
+    display: none
+  }
+
+  .navbar__nav-desktop {
+    display: inline-flex;
+  }
+}
+
+
+.navbar__nav-desktop ul li a::before {
+  display: inline-block;
+  margin-right: 6px;
+  font-weight: 500;
+}
+
+.navbar__nav-desktop ul > li:first-of-type a::before {
+  content: "01";
+}
+
+.navbar__nav-desktop ul > li:nth-of-type(2) a::before {
+  content: "02";
+}
+
+.navbar__nav-desktop ul > li:nth-of-type(3) a::before {
+  content: "03";
+}
+
+.navbar__nav-desktop ul > li:nth-of-type(4) a::before {
+  content: "04";
+}
+
+.navbar__nav-desktop ul > li:nth-of-type(5) a::before {
+  content: "05";
+}
+
+.navbar__nav-desktop ul > li:nth-of-type(6) a::before {
+  content: "06";
+}
+
+
+.navbar__contact::after {
+  content: " ";
+  border: solid $white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 5px;
+  transition: 500ms;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  margin-left: 6px;
+  margin-top: 4px;
+}

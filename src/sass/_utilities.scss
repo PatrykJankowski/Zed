@@ -1,0 +1,343 @@
+// margins
+.mt-35 {
+  margin-top: 35px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-70 {
+  margin-top: 70px;
+}
+
+.mt-300 {
+  margin-top: 300px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-35 {
+  margin-bottom: 35px;
+}
+
+.mb-70 {
+  margin-bottom: 70px;
+}
+
+.mb-120 {
+  margin-bottom: 120px;
+}
+
+.pt-0 {
+  padding-top: 0;
+}
+
+@media (min-width: 576px) {
+  .mt-0-sm {
+    margin-top: 0;
+  }
+
+  .mt-35-sm {
+    margin-top: 35px;
+  }
+
+  .mt-70-sm {
+    margin-top: 70px;
+  }
+
+  .mb-35-sm {
+    margin-bottom: 35px;
+  }
+
+  .mb-70-sm {
+    margin-bottom: 70px;
+  }
+
+  .mb-120-sm {
+    margin-bottom: 120px;
+  }
+}
+
+@media (min-width: 768px) {
+  .mt-0-md {
+    margin-top: 0;
+  }
+
+  .mt-35-md {
+    margin-top: 35px;
+  }
+
+  .mt-70-md {
+    margin-top: 70px;
+  }
+
+  .mb-35-md {
+    margin-bottom: 35px;
+  }
+
+  .mb-70-md {
+    margin-bottom: 70px;
+  }
+
+  .mb-120-md {
+    margin-bottom: 120px;
+  }
+}
+
+@media (min-width: 992px) {
+  .mt-0-lg {
+    margin-top: 0;
+  }
+
+  .mt-35-lg {
+    margin-top: 35px;
+  }
+
+  .mt-70-lg {
+    margin-top: 70px;
+  }
+
+  .mb-35-lg {
+    margin-bottom: 35px;
+  }
+
+  .mb-70-lg {
+    margin-bottom: 70px;
+  }
+
+  .mb-120-lg {
+    margin-bottom: 120px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mt-0-xl {
+    margin-top: 0;
+  }
+
+  .mt-35-xl {
+    margin-top: 35px;
+  }
+
+  .mt-70-xl {
+    margin-top: 70px;
+  }
+
+  .mb-35-xl {
+    margin-bottom: 35px;
+  }
+
+  .mb-70-xl {
+    margin-bottom: 70px;
+  }
+
+  .mb-120-xl {
+    margin-bottom: 120px;
+  }
+}
+
+.margin-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.margin-left-auto {
+  margin-left: auto;
+}
+
+.g-0 {
+  --bs-gutter-x: 0;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.h-435 {
+  height: 435px;
+}
+
+.relative {
+  position: relative;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.img-195 {
+  width: 195px;
+  height: 195px;
+  object-fit: cover;
+}
+
+// font
+.font-size-18 {
+  @include font-size(18);
+}
+
+.font-size-20 {
+  @include font-size(20);
+}
+
+.font-size-24 {
+  @include font-size(24);
+}
+
+.font-size-36 {
+  @include font-size(36);
+}
+
+
+@media (min-width: $resolution-lg) {
+  .font-size-24-lg {
+    @include font-size(24);
+  }
+
+  .font-size-30-lg {
+    @include font-size(30);
+  }
+
+  .font-size-36-lg {
+    @include font-size(36);
+  }
+
+  .font-size-52-lg {
+    @include font-size(52);
+  }
+
+}
+
+
+.color-primary {
+  color: $primary;
+}
+
+.color-white {
+  color: $white;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.font-style-italic {
+  font-style: italic;
+}
+
+.font-weight-300 {
+  font-weight: 300;
+}
+
+.font-weight-700 {
+  font-weight: 700;
+}
+
+
+// backround colors
+.bg-white {
+  background-color: $white;
+}
+
+.bg-grey {
+  background-color: #F2F2F2;
+}
+
+.bg-grey-dark {
+  background-color: #3C3C3B;
+}
+
+
+
+
+.text-align-center-lg {
+  @media (max-width: $resolution-lg - 1px) {
+      text-align: center;
+  }
+}
+
+.align-items-center-lg {
+  @media (max-width: $resolution-lg - 1px) {
+    align-items: center;
+  }
+}
+
+.hide-max-lg {
+  @media only screen and (max-width: $resolution-lg - 1px) {
+    display: none;
+  }
+}
+
+.hide-lg {
+  @media only screen and (min-width: $resolution-lg) {
+    display: none;
+  }
+}
+
+.bg-marketing {
+  position: relative;
+  background-image: url(/wp-content/themes/zed/img/bg_marketing.webp);
+  background-size: cover;
+  background-attachment: fixed;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    linear-gradient(180deg, #fff 5%, rgba(255,255,255,0.5) 50%);
+  }
+}
+
+
+.bg-offer {
+  height: 750px;
+  background: linear-gradient(180deg, #E5E5E5 25%, transparent 100%);
+  background-size: cover;
+}
+
+
+.smile-after::after {
+  content: " ";
+  background: url(/wp-content/themes/zed/img/smile.svg) no-repeat;
+  width: 83px;
+  display: inline-flex;
+  background-size: contain;
+  height: 97px;
+  position: absolute;
+  margin-left: 100px;
+  top: -25px;
+
+  @media (max-width: $resolution-md - 1px) {
+    width: 44px;
+    height: 50px;
+    margin-left: 0;
+    top: 60px;
+    left: calc(50% - 22px);
+  }
+}

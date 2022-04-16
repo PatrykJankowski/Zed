@@ -1,0 +1,58 @@
+.footer {
+  position: relative;
+  padding: 180px 0;
+  background-image: url(/wp-content/themes/zed/img/bg_footer.webp);
+  background-size: cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(10, 10, 10, 0.9);
+  }
+
+  &__contact {
+    @include font-size(24);
+    color: $white;
+  }
+
+  &__copyright {
+    @include font-size(14);
+    color: $white;
+    font-style: italic;
+    display: block;
+    text-align: center;
+
+    @media (min-width: $resolution-lg) {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: flex-end;
+    }
+  }
+
+  .menu {
+    list-style: none;
+    padding: 0;
+
+    text-align: center;
+    margin: $l 0;
+
+    @media (min-width: $resolution-lg) {
+      text-align: left;
+      margin: 0;
+    }
+
+    li {
+      a {
+        display: block;
+        color: $white;
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
